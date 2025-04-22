@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Layout>
       Home
-      <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
+      <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg top-10">
         {productos?.map((producto, index) => (
           <Card key={index} {...producto} />
         ))}
