@@ -6,7 +6,7 @@ import NotFound from "../NotFound/notFound";
 import SingIn from "../SingIn/SingIn";
 import "../../App.css";
 import Navbar from "../../Components/Navbar/navbar";
-
+import { ShoppingCardProvider } from "../../Context/context";
 
 // Funcion define las rutas
 function AppRoutes() {
@@ -16,7 +16,7 @@ function AppRoutes() {
       element: <Home />,
     },
     {
-      path: "/MyAccount", 
+      path: "/MyAccount",
       element: <MyAccount />,
     },
     {
@@ -38,14 +38,14 @@ function AppRoutes() {
 
 function App() {
   return (
-    <>
+    <ShoppingCardProvider>
       <div>
         <BrowserRouter>
-          <Navbar/>
+          <Navbar />
           <AppRoutes />
         </BrowserRouter>
       </div>
-    </>
+    </ShoppingCardProvider>
   );
 }
 

@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { ShoppingCardContext } from "../../Context/context";
 
 export default function Navbar() {
+  const context = useContext(ShoppingCardContext);
   const activeStyle = "underline underline-offset-4";
 
   return (
@@ -88,7 +91,9 @@ export default function Navbar() {
             Sing In
           </NavLink>
         </li>
-        <li>🛒</li>
+        <li>🛒
+          {context.count}
+        </li>
       </ul>
     </nav>
   );
