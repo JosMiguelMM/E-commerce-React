@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { ShoppingCardContext } from "../../Context/context";
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 
 export default function Navbar() {
   const context = useContext(ShoppingCardContext);
@@ -10,11 +11,7 @@ export default function Navbar() {
     <nav className="flex justify-between items-center fixed z-10 top-0 w-full p-5 px-8 text-sm font-light ">
       <ul className="flex items-center gap-3">
         <li className="font-semibold text-lg">
-          <NavLink
-            to="/"
-          >
-            Shoppi
-          </NavLink>
+          <NavLink to="/">Shoppi</NavLink>
         </li>
         <li>
           <NavLink
@@ -91,8 +88,9 @@ export default function Navbar() {
             Sing In
           </NavLink>
         </li>
-        <li>🛒
-          {context.count}
+        <li className="flex items-center">
+          <ShoppingCartIcon className="size-6 text-black" />
+          <div>{context.count}</div>
         </li>
       </ul>
     </nav>

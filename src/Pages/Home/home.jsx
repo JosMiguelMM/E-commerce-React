@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "../../Components/Card/card";
 import Layout from "../../Components/Layout/Layout";
-
+import { ProductDetail } from "../../Components/ProductDetail/product_detail";
 
 export default function Home() {
   const [productos, setProductos] = useState(null);
@@ -19,6 +19,7 @@ export default function Home() {
           <Card key={index} {...producto} />
         ))}
       </div>
+      <ProductDetail />
     </Layout>
   );
 }

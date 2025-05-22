@@ -10,7 +10,6 @@ ShoppingCardProvider.propTypes = {
 // ...existing code...
 export function ShoppingCardProvider({ children }) {
   const [count, setCount] = useState(0);
-  console.log("Count ", count);
   return (
     <ShoppingCardContext.Provider value={{ count, setCount }}>
       {children}
