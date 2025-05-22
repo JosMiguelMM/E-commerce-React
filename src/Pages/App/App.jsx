@@ -1,9 +1,9 @@
 import { useRoutes, BrowserRouter } from "react-router-dom";
-import Home from "../Home/Home";
+import Home from "../Home/home";
 import MyAccount from "../MyAccount/myAccount";
 import MyOrder from "../MyOrder/myOrder";
 import NotFound from "../NotFound/notFound";
-import SingIn from "../SingIn/SingIn";
+import SingIn from "../SingIn/singIn";
 import "../../App.css";
 import Navbar from "../../Components/Navbar/navbar";
 import { ShoppingCardProvider } from "../../Context/context";
