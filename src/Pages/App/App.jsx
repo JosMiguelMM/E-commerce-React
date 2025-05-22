@@ -9,6 +9,7 @@ import Navbar from "../../Components/Navbar/navbar";
 import { ShoppingCardProvider } from "../../Context/context";
 
 // Funcion define las rutas
+// funciona
 function AppRoutes() {
   const router = useRoutes([
     {
